@@ -1,6 +1,6 @@
-# Ejercicio - Hello World
+# Proyecto Aeropuerto
 
-Este proyecto tiene la estructura básica para cualquier proyecto C++. 
+Este proyecto incorpora elementos de programación orientada a objetos en c++ 
 
 La carpeta contiene el código fuente y el archivo de construcción ```make```.
 

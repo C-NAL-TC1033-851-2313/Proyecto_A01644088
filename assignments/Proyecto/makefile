@@ -1,16 +1,16 @@
 all: clean compile run
 
-compile: proyectoA01644088.cpp
-	g++ *.cpp -o build/proyectoA01644088
+compile: exercise.cpp
+	g++ *.cpp -o build/exercise
 run: 
 	clear
-	build/proyectoA01644088
+	build/exercise
 clean:
-	rm -f build/proyectoA01644088
-	rm -f build/dproyectoA01644088
+	rm -f build/exercise
+	rm -f build/dexercise
 debug: 
-	g++ *.cpp -g -o dproyectoA01644088
-	gdb dproyectoA01644088
-	rm -f dproyectoA01644088
+	g++ *.cpp -g -o dexercise
+	gdb dexercise
+	rm -f dexercise
 debugvs:
-	g++ *.cpp -g -o build/dproyectoA01644088
+	g++ *.cpp -g -o build/dexercise

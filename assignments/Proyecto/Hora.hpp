@@ -1,39 +1,20 @@
 
-#include <iostream>
-#include <iomanip>
-#include "Hora.hpp"
+#ifndef HORA_HPP
+#define HORA_HPP
 
-Hora::Hora() : hora(0), minutos(0) {}
+class Hora {
+private:
+    int hora;
+    int minutos;
 
-Hora::Hora(int h, int m) : hora(0), minutos(0) {
-    setHora(h);
-    setMin(m);
-}
+public:
+    Hora();
+    Hora(int h, int m);
+    int getHora() const;
+    int getMin() const;
+    void setHora(int h);
+    void setMin(int m);
+    void imprime() const;
+};
 
-int Hora::getHora() const {
-    return hora;
-}
-
-int Hora::getMin() const {
-    return minutos;
-}
-
-void Hora::setHora(int h) {
-    if (h >= 0 && h <= 23) {
-        hora = h;
-    } else {
-        std::cerr << "Error: Hora invalida. Puesto como 00:00.\n";
-    }
-}
-
-void Hora::setMin(int m) {
-    if (m >= 0 && m <= 59) {
-        minutos = m;
-    } else {
-        std::cerr << "Error: Hora invalida. Puesto como 00:00.\n";
-    }
-}
-
-void Hora::imprime() const {
-    std::cout << std::setw(2) << std::setfill('0') << hora << ":" << std::setw(2) << std::setfill('0') << minutos;
-}
+#endif 
